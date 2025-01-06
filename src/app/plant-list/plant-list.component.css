@@ -1,0 +1,8 @@
+.plants-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant-card-container {
+    flex: 0 0 calc(33.33% - 10px);
+}
