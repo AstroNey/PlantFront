@@ -1,0 +1,17 @@
+<div class="custom-select" [class.open]="isOpen">
+    <div class="selected" (click)="toggleDropdown()">
+        {{ selectedOption?.label || 'Localitée' }}
+        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+    </div>
+
+    <!-- Dropdown options -->
+    <div class="options">
+        <div
+            *ngFor="let option of options"
+            class="option"
+            [class.selected]="option.value === selectedOption?.value"
+            (click)="selectOption(option)">
+            {{ option.label }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+.open.custom-select {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.custom-select {
+    position: relative;
+    width: fit-content;
+    background: var(--color-input-opa-05);
+    border-radius: 33px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.custom-select .selected {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.custom-select .options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-input-opa-05);
+    border: 1px solid var(--color-white);
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.custom-select .options div {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.custom-select .options div:hover {
+    background: var(--color-input-opa-05);
+}
+
+.custom-select.open .options {
+    display: block;
+}

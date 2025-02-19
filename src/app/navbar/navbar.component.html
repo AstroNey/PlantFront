@@ -1,0 +1,21 @@
+<div class="navbar">
+    <div class="main-navbar">
+        <div class="nav-link" [routerLink]="''">
+            <span class="material-icons-outlined">home</span>
+            <span class="sour-gummy-thin">Accueil</span>
+        </div>
+        <div class="nav-link" [routerLink]="'/plants'">
+            <span class="material-icons-outlined">forest</span>
+            <span class="sour-gummy-thin">Plantes</span>
+        </div>
+        <div class="nav-link" *ngIf="true">
+            <span class="material-symbols-rounded ">favorite</span>
+            <span class="sour-gummy-thin">Favoris</span>
+        </div>
+    </div>
+    <div class="account-navbar">
+        <div class="nav-link">
+            <span class="material-icons-outlined">account_circle</span>
+        </div>
+    </div>
+</div>

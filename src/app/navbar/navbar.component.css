@@ -1,0 +1,41 @@
+span {
+    font-size: 35px;
+}
+
+span:last-child {
+    font-size: 40px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    background: var(--color-white);
+    color: var(--color-secondary);
+    width: 100%;
+}
+
+.main-navbar {
+    margin: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.account-navbar {
+    margin: 1%;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20%;
+    width: fit-content;
+}
+
+
