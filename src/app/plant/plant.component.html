@@ -1,9 +1,9 @@
-<div class="plant-card">
+<div class="plant-card" [routerLink]="'/plants/' + plant.id">
     <div class="image-container">
-        <img src="assets/imageTest.png" alt="{{ plant.name | lowercase }}" height="225" width="225">
+        <img [src]="'data:image/jpg;base64,' + plant.image" alt="{{ plant.name | lowercase }}">
     </div>
     <div class="info-container">
-        <h2>{{ plant.name | uppercase }}</h2>
-        <p>{{ plant.description }}</p>
+        <h2 class="sour-gummy-bolder">{{ plant.name | uppercase }}</h2>
+        <p >{{ plant.description }}</p>
     </div>
 </div>

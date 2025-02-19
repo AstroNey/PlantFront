@@ -1,7 +1,33 @@
+img {
+    max-width: 225px;
+    min-height: 275px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+p {
+    text-align: center;
+}
+
 .plant-card {
-    box-sizing: border-box;
-    width: 50%;
-    margin: 20px auto;
-    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-shadow: lightgray 4px 4px 20px;
+    border-radius: 10%;
+    width: 225px;
+    background-color: var(--color-white);
+}
+
+.plant-card:hover {
+    transform: scale(1.2);
+}
+
+.info-container {
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

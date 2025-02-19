@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-color-primary: #F1EADF;
+    --color-secondary: #29734F;
+    --color-white: #FFFFFF;
+    --color-input: rgb(153, 153, 153);
+    --color-input-opa-05: rgba(153, 153, 153, 0.5);
+    --color-input-opa-02: rgba(153, 153, 153, 0.2);
+}
+
+body {
+    margin: 0;
+    background: var(--bg-color-primary);
+}
+
+.sour-gummy-thin {
+     font-family: "Sour Gummy", serif;
+     font-optical-sizing: auto;
+     font-weight: lighter;
+     font-style: normal;
+     font-variation-settings:
+         "wdth" 100;
+ }

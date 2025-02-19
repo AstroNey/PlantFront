@@ -7,9 +7,13 @@ import {Observable} from 'rxjs';
 })
 export class PlantService {
 
-    constructor(private http: HttpClient) { }
+    plants: any[] = [];
 
-    getAllPlants(): Observable<any> {
-        return this.http.get<any>('http://localhost:8080/plants');
+    constructor(private http: HttpClient) {
+    }
+
+    getAllPlants(limit: number): Observable<any> {
+        //TODO cache
+        return this.http.get<any>(`http://localhost:8080/plants?size=${(limit)}`);
     }
 }

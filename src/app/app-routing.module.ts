@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {PlantListComponent} from './plant-list/plant-list.component';
+import {HomeComponent} from './home/home.component';
+import {PlantPageComponent} from './plant-page/plant-page.component';
+import {PlantListPageComponent} from './plant-list-page/plant-list-page.component';
 
 const routes: Routes = [
-    { path: '', component: PlantListComponent },
+    { path: '', component: HomeComponent },
+    { path: 'plants/:id', component: PlantPageComponent },
+    { path: 'plants', component: PlantListPageComponent }
 ];
 
 @NgModule({

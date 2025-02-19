@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
+import {Component, Input, numberAttribute, OnInit} from '@angular/core';
+import {map, Observable} from 'rxjs';
 import {PlantService} from '../service/plant/plant-service.service';
-import {Plant} from '../models/Plant';
 
 @Component({
   selector: 'app-plant-list',
@@ -11,13 +10,14 @@ import {Plant} from '../models/Plant';
   styleUrl: './plant-list.component.css'
 })
 export class PlantListComponent implements OnInit {
+    @Input({transform: numberAttribute}) limit: number = 3;
 
-  plants$!: Observable<Plant[]>;
+    plants$!: Observable<any>;
 
-  constructor(private plantService: PlantService) {
-  }
+    constructor(private plantService: PlantService) {
+    }
 
-  ngOnInit(): void {
-      this.plants$ = this.plantService.getAllPlants();
-  }
+    ngOnInit(): void {
+      this.plants$ = this.plantService.getAllPlants(this.limit);
+    }
 }

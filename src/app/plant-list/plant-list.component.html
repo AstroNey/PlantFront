@@ -1,3 +1,5 @@
-<div class="plants-list">
-    <app-plant *ngFor="let plant of plants$ | async" [plant]="plant" class="plant-card-container"/>
+<div class="plants-list" *ngIf="plants$ | async as plants">
+    <ng-container *ngFor="let plant of plants.content">
+        <app-plant [plantString]="plant" class="plant-card-container"></app-plant>
+    </ng-container>
 </div>

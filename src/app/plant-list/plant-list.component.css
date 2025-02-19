@@ -1,8 +1,15 @@
 .plants-list {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .plant-card-container {
-    flex: 0 0 calc(33.33% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 calc(25% - 10px);
+    margin-top: 10px;
 }
